@@ -1,0 +1,11 @@
+class atoi
+{
+    public static void main(){
+        System.out.println("Enter the String argument that is to be converted to integer:");
+        String st=new java.util.Scanner(System.in).next();
+        System.out.println(st.matches(".*\\D.*")?0:new atoi().Implement(st,st.length()-1));
+    }
+    long Implement(String str, int i){
+        return i==0?str.charAt(0)-48:this.Implement(str,i-1)*10+str.charAt(i)-48;
+    }
+}
